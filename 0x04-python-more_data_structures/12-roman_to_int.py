@@ -15,6 +15,7 @@ def roman_to_int(roman_string):
         value = symbols[roman_string[index]]
         while index >= 0:
             symbol = roman_string[index]
+
             if symbols[roman_string[index - 1]] < symbols[symbol] and index != 0:
                 digits.append(symbols[symbol] - symbols[roman_string[index - 1]])
                 index -= 2
@@ -25,6 +26,6 @@ def roman_to_int(roman_string):
             elif index == 0:
                 digits.append(symbols[symbol])
                 break
-            return sum(digits)
+        return sum(digits)
     else:
         return None
