@@ -13,21 +13,20 @@ def roman_to_int(roman_string):
                 "M": 1000,
                 }
         value = symbols[roman_string[index]]
-       
         while index >= 0:
             symbol = roman_string[index]
-            
-            if symbols[roman_string[index - 1]] < symbols[symbol] and index != 0:
+            if symbols[roman_string[index - 1]] < symbols[symbol] and\
+                    index != 0:
                 digits.append(symbols[symbol] - symbols[roman_string[index - 1]])
                 index -= 2
-            elif symbols[roman_string[index - 1]] >= symbols[symbol] and index != 0:
+            elif symbols[roman_string[index - 1]] >= symbols[symbol] and\
+                    index != 0:
                 digits.append(symbols[symbol])
                 value = symbols[symbol]
                 index -= 1
             elif index == 0:
                 digits.append(symbols[symbol])
-                break              
-        
-        return sum(digits)
+                break
+            return sum(digits)
     else:
         return None
