@@ -28,4 +28,4 @@ def roman_to_int(roman_string):
                 break
         return sum(digits)
     else:
-        return None
+        return 0
