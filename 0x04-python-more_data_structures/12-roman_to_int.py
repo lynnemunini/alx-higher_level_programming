@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if (type(roman_string) != str) or (roman_string is None):
-        return None
-    else:
+    if (type(roman_string) == str):
         index = len(roman_string) - 1
         digits = []
         symbols = {
@@ -31,3 +29,5 @@ def roman_to_int(roman_string):
                 break              
         
         return sum(digits)
+    else:
+        return None
