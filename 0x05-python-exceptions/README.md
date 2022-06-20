@@ -13,6 +13,7 @@
 6. Write a function that raises a name exception with a message
 
 **Advanced**
+
 7. Write a function that prints an integer
 8. Write a function that executes a function safely
 9. Write the Python function def magic\_calculation(a, b): that does exactly the same as the following Python bytecode
