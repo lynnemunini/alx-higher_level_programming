@@ -7,5 +7,5 @@ def safe_print_list(my_list=[], x=0):
             value += 1
         print()
         return value
-    except:
+    except Exception:
         print()
