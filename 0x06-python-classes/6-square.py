@@ -11,27 +11,8 @@ class Square:
         the type and value of this attribute. position must be a \
         tuple of 2 positive integers'''
 
-        #  size
-        if type(size) != int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
-
-        #  position
-        list_position = list(position)
-
-        try:
-            if (type(position) != tuple) or (list_position[0] < 0) \
-                    or (list_position[1] < 0):
-                raise TypeError("position must be a tuple of \
-                        2 positive integers")
-        except IndexError:
-            raise TypeError("position must be a tuple of \
-                    2 positive integers")
-        else:
-            self.__position = position
+        self.__size = size
+        self.__position = position
 
     def area(self):
         '''Public instance method that returns te current square area'''
