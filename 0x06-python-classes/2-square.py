@@ -10,6 +10,7 @@ class Square:
         this value private so as to ensure the class builder controls \
         the type and value of this attribute'''
         self.__size = size
+
         if type(self.__size) != int:
            raise TypeError("size must be an integer")
         if self.__size < 0:
