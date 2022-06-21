@@ -9,9 +9,9 @@ class Square:
         of it (area computation, etc.). It is important to keep to keep \
         this value private so as to ensure the class builder controls \
         the type and value of this attribute'''
-        self.__size = size
 
-        if type(self.__size) != int:
+        if type(size) != int:
            raise TypeError("size must be an integer")
-        if self.__size < 0:
+        elif size < 0:
            raise ValueError("size must be >= 0")
+        self.__size = size
