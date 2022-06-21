@@ -31,16 +31,10 @@ class Square:
     @position.setter
     def position(self, value):
         '''Property setter to change the value of position'''
-        list_value = list(value)
-        try:
-            if (type(value) != tuple) or (list_value[0] < 0) or \
-                    (list_value[1] < 0):
-                raise TypeError("position must be a tuple of \
+        if (type(value) != tuple) or (value[0] < 0) or (value[1] < 0):
+            raise TypeError("position must be a tuple of \
                         2 positive integers")
-        except IndexError:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = value
+        self.__position = value
 
     @size.setter
     def size(self, value):
