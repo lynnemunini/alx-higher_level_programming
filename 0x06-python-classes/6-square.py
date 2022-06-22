@@ -34,9 +34,9 @@ class Square:
         if (type(value) != tuple) or (value[0] < 0) or \
                 (value[1] < 0) or (type(value[0]) != int) or \
                 (type(value[1]) != int):
-            raise TypeError("position must be a tuple of \
-                        2 positive integers")
-        self.__position = value
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = value
 
     @size.setter
     def size(self, value):
@@ -51,8 +51,9 @@ class Square:
         '''Prints in stdout the square with the character #'''
         if self.__size == 0:
             print()
-        for i in range(self.__size):
-            print(" " * self.__position[0], end="")
-            for j in range(self.__size):
-                print("#", end="")
-            print()
+        else:
+            for i in range(self.__size):
+                print(" " * self.__position[0], end="")
+                for j in range(self.__size):
+                    print("#", end="")
+                print()
