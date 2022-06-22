@@ -10,7 +10,6 @@ class Square:
         this value private so as to ensure the class builder controls \
         the type and value of this attribute. position must be a \
         tuple of 2 positive integers'''
-
         self.__size = size
         self.__position = position
 
@@ -35,7 +34,7 @@ class Square:
                 (value[1] < 0) or (type(value[0]) != int) or \
                 (type(value[1]) != int):
             raise TypeError("position must be a tuple of 2 positive integers")
-        else:
+        elif:
             self.__position = value
 
     @size.setter
@@ -52,6 +51,7 @@ class Square:
         if self.__size == 0:
             print()
         else:
+            print("\n" * self.__position[1], end="")
             for i in range(self.__size):
                 print(" " * self.__position[0], end="")
                 print("#" * self.__size)
