@@ -12,7 +12,7 @@
 4. Write a function that prints a text with 2 new lines after each of these characters: ., ? and :
 5. Since the beginning you have been creating “Interactive tests”. For this exercise, you will add Unittests.
 In this task, you will write unittests for the function def max\_integer(list=[]):
-* Your test file should be inside a folder tests
+	* Your test file should be inside a folder tests
 
 **Advanced**
 6. Write a function that multiplies 2 matrices
