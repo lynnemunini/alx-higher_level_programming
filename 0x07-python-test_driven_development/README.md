@@ -15,6 +15,7 @@ In this task, you will write unittests for the function def max\_integer(list=[]
 	* Your test file should be inside a folder tests
 
 **Advanced**
+
 6. Write a function that multiplies 2 matrices
 7. Write a function that multiplies 2 matrices by using the module NumPy
 8. **CPython** Create a function that prints Python strings.
