@@ -26,8 +26,7 @@ def matrix_divided(matrix, div):
     places
     """
 
-    if type(matrix) != list or any(isinstance(i, list) \
-            for i in matrix) is False:
+    if type(matrix) != list or any(isinstance(i, list) for i in matrix) is False:
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     for i in matrix:
         for j in i:
