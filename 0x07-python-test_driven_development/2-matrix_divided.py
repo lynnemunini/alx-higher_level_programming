@@ -26,14 +26,13 @@ def matrix_divided(matrix, div):
     places
     """
 
-    if any(isinstance(i, list) for i in matrix) is False:
-        raise TypeError("matrix must be a matrix (list of lists) \
-                of integers/floats")
+    if type(matrix) != list or any(isinstance(i, list) \
+            for i in matrix) is False:
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     for i in matrix:
         for j in i:
             if type(j) != int and type(j) != float:
-                raise TypeError("matrix must be a matrix (list of lists) \
-                        of integers/floats")
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
     lst = iter(matrix)
     length = len(next(lst))
@@ -43,7 +42,7 @@ def matrix_divided(matrix, div):
     if type(div) != int and type(div) != float:
         raise TypeError("div must be a number")
 
-    if div == 0:
+    if div is 0:
         raise ZeroDivisionError("division by zero")
 
     new_matrix = []
