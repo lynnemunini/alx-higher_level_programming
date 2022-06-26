@@ -20,7 +20,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_returns_max(self):
         """
-        test_return_max checks whether the the max integer is 
+        test_return_max checks whether the the max integer is
         returned given valid inputs
         """
         max_value = max_integer([2, 7, 9])
