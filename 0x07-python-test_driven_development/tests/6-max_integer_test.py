@@ -42,3 +42,17 @@ class TestMaxInteger(unittest.TestCase):
         max_value = max_integer([1, 1])
         expected = 1
         self.assertEqual(max_value, expected)
+
+    def test_string_values(self):
+        """
+        test the function given string values
+        """
+        self.assertRaises(TypeError, max_integer, [1, "girl", "yes"])
+
+    def test_float_values(self):
+        """
+        test the function given floating point values
+        """
+        max_value = max_integer([1.7, 2.2])
+        expected = 2.2
+        self.assertEqual(max_value, expected)
