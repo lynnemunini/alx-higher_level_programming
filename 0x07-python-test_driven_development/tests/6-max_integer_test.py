@@ -26,3 +26,11 @@ class TestMaxInteger(unittest.TestCase):
         max_value = max_integer([2, 7, 9])
         expected = 9
         self.assertEqual(max_value, expected)
+
+    def test_negative_values(self):
+        """
+        test the function given negative integers as input
+        """
+        max_value = max_integer([-1, 0, -5])
+        expected = 0
+        self.assertEqual(max_value, expected)
