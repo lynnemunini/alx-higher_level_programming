@@ -34,3 +34,11 @@ class TestMaxInteger(unittest.TestCase):
         max_value = max_integer([-1, 0, -5])
         expected = 0
         self.assertEqual(max_value, expected)
+
+    def test_same_values(self):
+        """
+        test the function given similar values
+        """
+        max_value = max_integer([1, 1])
+        expected = 1
+        self.assertEqual(max_value, expected)
