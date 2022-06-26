@@ -15,5 +15,14 @@ class TestMaxInteger(unittest.TestCase):
         test_list_has_items is a method. Calls max_integer with
         an empty list and verifies if None is returned
         """
-        my_list = max_integer([])
-        self.assertIsNone(my_list)
+        max_value = max_integer([])
+        self.assertIsNone(max_value)
+
+    def test_returns_max(self):
+        """
+        test_return_max checks whether the the max integer is 
+        returned given valid inputs
+        """
+        max_value = max_integer([2, 7, 9])
+        expected = 9
+        self.assertEqual(max_value, expected)
