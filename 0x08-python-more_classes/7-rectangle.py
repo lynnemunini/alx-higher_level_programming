@@ -26,7 +26,8 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         else:
-            shape = ((str(self.print_symbol) * self.__width) + "\n") * (self.__height)
+            shape = ((str(self.print_symbol) * self.__width) + "\n") *\
+                     (self.__height)
             return shape[:-1]
 
     def __repr__(self):
