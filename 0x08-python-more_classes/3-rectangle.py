@@ -15,7 +15,7 @@ class Rectangle:
         self.height = height
         self.width = width
 
-    def __str__(self, width=0, height=0):
+    def __str__(self):
         """
         Print the rectangle with the character #
         """
