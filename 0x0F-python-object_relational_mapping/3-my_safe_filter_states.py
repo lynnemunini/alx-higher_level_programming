@@ -13,11 +13,11 @@ if __name__ == '__main__':
     import sys
 
     db = MySQLdb.connect(host="localhost", port=3306,
-                         user=sys.argv[1], passwd="",
-                         db=sys.argv[2], charset="utf8")
+                         user=sys.argv[1], passwd=sys.argv[2],
+                         db=sys.argv[3], charset="utf8")
     cur = db.cursor()
     cur.execute("SELECT * FROM states WHERE name=%s\
-            ORDER BY states.id", (sys.argv[3], ))
+            ORDER BY states.id", (sys.argv[4], ))
     rows = cur.fetchall()
     for row in rows:
         print(row)
