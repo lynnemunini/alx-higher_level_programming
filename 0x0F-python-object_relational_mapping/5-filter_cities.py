@@ -20,7 +20,7 @@ if __name__ == '__main__':
             ORDER BY cities.id", (sys.argv[3], ))
     rows = cur.fetchall()
     for row in rows:
-        print(row)
+        print(row[1], end=", ")
     # Close all cursors
     cur.close()
     # Close all databases
