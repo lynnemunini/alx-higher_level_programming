@@ -15,7 +15,7 @@ if __name__ == '__main__':
                          db=sys.argv[3], charset="utf8")
     cur = db.cursor()
     cur.execute("SELECT cities.id, cities.name, states.name\
-            FROM cities INNER JOIN states ON\
+            FROM cities RIGHT JOIN states ON\
             state_id = states.id WHERE states.name=%s\
             ORDER BY cities.id", (sys.argv[4], ))
     rows = cur.fetchall()
