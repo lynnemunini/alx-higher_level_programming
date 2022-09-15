@@ -12,7 +12,7 @@ if __name__ == '__main__':
                          user=sys.argv[1], passwd="",
                          db=sys.argv[2], charset="utf8")
     cur = db.cursor()
-    cur.execute("SELECT * FROM cities ORDER BY cities.id")
+    cur.execute("SELECT cities.id, cities.name, states.name FROM cities INNER JOIN states ON state_id = states.id ORDER BY cities.id")
     rows = cur.fetchall()
     for row in rows:
         print(row)
