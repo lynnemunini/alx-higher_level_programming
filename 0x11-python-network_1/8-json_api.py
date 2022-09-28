@@ -6,15 +6,15 @@ to http://0.0.0.0:5000/search_user with the letter as a parameter
 import sys
 import requests
 if __name__ == "__main__":
-    params = {'q': ""}
-    if len(sys.argv) != 1:
-        params["q"] = sys.argv[1]
-
-    response = requests.get('http://0.0.0.0:5000/search_user', params=params)
+    if len(sys.argv) == 1:
+        q = ""
+    else:
+        q = sys.argv[1]
+    response = requests.post('http://0.0.0.0:5000/search_user', data={"q": q})
     try:
         data = response.json()
         if data:
-            print(f"{data.get('id')}, {data.get('name')}")
+            print(f"[{data.get('id')}] {data.get('name')}")
         else:
             print('No result')
     except:
